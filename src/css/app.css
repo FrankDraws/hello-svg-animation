@@ -1,0 +1,284 @@
+/*
+	hello svg animation
+
+*/
+
+html {
+	scroll-behavior: smooth;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	background: #d7d7d7;
+	/* background: linear-gradient(340deg, #00C9FF 0%, #92FE9D 100%); */
+
+	/* background-size: 300% 300%;
+	background-image: linear-gradient(-45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+	-webkit-animation: AnimateBG 20s ease infinite;
+	animation: AnimateBG 20s ease infinite; */
+}
+
+@-webkit-keyframes AnimateBG {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+  
+  @keyframes AnimateBG {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+
+
+body {
+	/* background-color: #7895A4; */
+
+	/* background: url("../images/corner-paint.png");
+	background-position: right 0 bottom 0;
+	background-size: 1100px;
+	
+	background-blend-mode: multiply; */
+	/* background: linear-gradient(340deg, #00C9FF 0%, #92FE9D 100%); */
+	/* background-repeat: no-repeat; */
+ 
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	
+	overflow: auto;
+}
+
+
+
+/*
+///////////////// CONTENT 
+*/
+.c404 {
+	text-align: center;
+}
+
+.title {
+	margin-top: 1em;
+	flex-direction: column;
+}
+.content-01 {
+	max-width: 45%;
+
+	animation: fadein 5s;
+	margin-top: 1em;
+
+	/* border-radius: 20px;
+	background: #fff;
+	padding: 1.5em;
+	box-shadow: 2px 25px 85px rgba(0,0,0,0.4); */
+
+	align-items: flex-start;
+	justify-content: center;
+}
+
+
+
+.content-01 p {
+	font: 400 22px/1.4 'Merriweather', serif;
+	color: #777; 
+	letter-spacing: .04em;
+	margin: 0;
+	padding: 1em;
+	text-align: justify;
+
+	
+}
+
+
+
+/*
+///////////////// SVG 
+*/
+svg {
+	max-width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	/* animation: fadein 7s; */
+	/* outline: 1px solid red; */
+}
+
+.line {
+	stroke-dasharray: 2000;
+	/* stroke-dashoffset: 4000; */
+	animation: dash 2s linear forwards;
+}
+
+@keyframes dash {
+	from {
+		stroke-dashoffset: 2000;
+	}
+
+	to {
+		stroke-dashoffset: 4000;
+	}
+}
+
+
+
+/*
+///////////////// FADE IN ANIMATION 
+*/
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+
+/*
+///////////////// LINKS 
+Colors
+LinkedIn: #007bb6
+Twitter: #3CF
+Instagram: #eb1377
+*/
+.social-links {
+	margin-top: 1em;
+}
+a, a:visited {
+	display: inline-block;
+    color: #767676;
+	text-decoration: none;
+	border-bottom: 2px solid #767676;
+	transition: all ease-in-out .3s;
+	line-height: 1.2;
+}
+a:hover {
+	color: dodgerblue;
+	border-bottom: 2px solid dodgerblue;
+	transition: all ease-in-out .3s;
+}
+
+
+
+
+
+
+
+
+/*
+///////////////// RESPONSIVE 
+*/
+@media only screen 
+and (max-width: 320px) {
+
+	.title {
+		order: 1;
+		align-items: flex-start;
+	}
+	.content-01 {
+		order: 2;
+		align-items: flex-start;
+		flex-direction: column;
+		max-width: 100%;
+	}
+	.content-01 p {
+		font: 400 16px/1.6 'Noto Serif', serif;
+	}
+	.title p {
+		text-align: left;
+	}
+
+	.social-links {
+		margin-bottom: 1.5em;
+		padding-bottom: 0;
+	}
+}
+
+@media only screen 
+and (min-width: 321px)
+and (max-width: 480px) {
+	.content-01 {
+		flex-direction: column;
+		max-width: 100%;
+	}
+	.content-01 p {
+		font: 400 16px/1.6 'Noto Serif', serif;
+	}
+
+	.title, .title p {
+		text-align: left;
+	}
+	.social-links {
+		margin-bottom: 1.5em;
+	}
+	.social-links li {
+		padding: 0 1em 0 0;
+	}
+
+}
+
+@media only screen 
+and (min-width: 481px)
+and (max-width: 767px) {
+	.title, .title p {
+		text-align: left;
+	}
+	.content-01 {
+		max-width: 100%;
+	}
+	.social-links {
+		margin-bottom: 1.5em;
+	}
+
+}
+
+@media only screen 
+and (min-width: 768)
+and (max-width: 1024px) {
+	body {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	
+	overflow: auto;
+	}
+	.title {
+		order: 1;
+		align-items: flex-start;
+	}
+	.content-01 {
+		flex-direction: column;
+		padding: 1.3em;
+		font: 400 24px/1.4 'Noto Serif', serif;
+		max-width: 100%;
+	}
+	.content-01 p {
+		padding: 1em;
+	}
+
+	.social-links li {
+		display: inline;
+	}
+
+}
