@@ -39,12 +39,19 @@ gulp.task('imgminify', async function(){
 // Watch and Browser Sync
 gulp.task('watch', function() {
     browserSync.init({
-        proxy: "http://0.0.0.0:8000/dist/"
+        injectChanges: true,
+        proxy: "http://0.0.0.0:8000/dist/",
+        // browser: "firefox",
+        ghostMode: {
+            clicks: false,
+            scroll: false
+        }
+        
     });
     
-    gulp.watch('src/*.html', gulp.series('copyHTML'));
     gulp.watch('src/css/*.css', gulp.series('minifycss'));
-    gulp.watch('src/images/*', gulp.series('imgminify'));
+    gulp.watch('src/*.html',    gulp.series('copyHTML'));
+    gulp.watch('src/images/*',  gulp.series('imgminify'));
 
     gulp.watch("dist/**/**").on("change", reload);
 });
