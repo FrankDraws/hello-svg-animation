@@ -126,6 +126,7 @@ svg {
 	stroke-dasharray: 2000;
 	/* stroke-dashoffset: 4000; */
 	animation: dash 2s linear forwards;
+	/* previous line color #777777 */
 }
 
 @keyframes dash {
