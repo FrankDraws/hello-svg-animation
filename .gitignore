@@ -56,5 +56,6 @@ Thumbs.d
 # /Work
 
 # !directoryName/
+!.gitignore
 ~/.bash_profile
 resources.txt

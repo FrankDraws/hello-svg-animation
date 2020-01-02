@@ -55,3 +55,5 @@ gulp.task('watch', function() {
 
     gulp.watch("dist/**/**").on("change", reload);
 });
+
+gulp.task('default', gulp.parallel('watch'));
