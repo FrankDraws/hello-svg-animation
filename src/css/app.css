@@ -80,8 +80,12 @@ body {
 	/* transform: rotate(-10deg); */
 	outline: 1px solid red;
 }
+
+#container {
+	max-width: 100vw;
+}
 .content {
-	max-width: 45%;
+	/* max-width: 50vw; */
 
 	animation: fadein 5s;
 	margin-top: 1em;
@@ -99,12 +103,13 @@ body {
 
 
 .content p {
-	font: 400 22px/1.4 'Merriweather', serif;
+	font: 400 3vw/1.4 'Merriweather', serif;
 	color: #777; 
 	letter-spacing: .04em;
 	margin: 0;
 	padding: 1em;
 	text-align: justify;
+	display: flex;
 
 	
 }
@@ -115,10 +120,10 @@ body {
 ///////////////// SVG 
 */
 svg {
-	max-width: 100vw;
+	max-width: 100%;
 	/* height: 100%; */
 	display: block;
-	margin: 0;
+	margin: auto;
 	padding: 0;
 
 	/* animation: fadein 7s; */
@@ -193,19 +198,18 @@ a:hover {
 ///////////////// RESPONSIVE 
 */
 @media only screen 
-and (max-width: 320px) {
+and (min-width: 320px) {
 
 	.title {
 		order: 1;
 		align-items: flex-start;
 	}
-	.content-01 {
+	.content {
 		order: 2;
 		align-items: flex-start;
 		flex-direction: column;
-		max-width: 100%;
 	}
-	.content-01 p {
+	.content p {
 		font: 400 16px/1.6 'Noto Serif', serif;
 	}
 	.title p {
@@ -218,14 +222,15 @@ and (max-width: 320px) {
 	}
 }
 
-@media only screen 
+/* @media only screen 
 and (min-width: 321px)
-and (max-width: 480px) {
-	.content-01 {
+and (max-width: 480px) 
+{
+	.content {
 		flex-direction: column;
-		max-width: 100%;
+		max-width: 100vw;
 	}
-	.content-01 p {
+	.content p {
 		font: 400 16px/1.6 'Noto Serif', serif;
 	}
 
@@ -239,16 +244,17 @@ and (max-width: 480px) {
 		padding: 0 1em 0 0;
 	}
 
-}
+} */
 
 @media only screen 
 and (min-width: 481px)
-and (max-width: 767px) {
+/* and (max-width: 767px)  */
+{
 	.title, .title p {
 		text-align: left;
 	}
-	.content-01 {
-		max-width: 100%;
+	.content {
+		/* max-width: 100vw; */
 	}
 	.social-links {
 		margin-bottom: 1.5em;
@@ -257,13 +263,14 @@ and (max-width: 767px) {
 }
 
 @media only screen 
-and (min-width: 768)
-and (max-width: 1024px) {
+and (min-width: 768px)
+/* and (max-width: 1024px)  */
+{
 	body {
-	display: flex;
-	align-items: flex-start;
+	/* display: flex; */
+	/* align-items: flex-start;
 	justify-content: flex-start;
-	flex-direction: column;
+	flex-direction: column; */
 	
 	overflow: auto;
 	}
@@ -271,18 +278,29 @@ and (max-width: 1024px) {
 		order: 1;
 		align-items: flex-start;
 	}
-	.content-01 {
+	#container {
+		max-width: 50vw;
+	}
+	.content {
 		flex-direction: column;
 		padding: 1.3em;
 		font: 400 24px/1.4 'Noto Serif', serif;
-		max-width: 100%;
+		width: auto;
 	}
-	.content-01 p {
+	.content p {
 		padding: 1em;
+		font-size: 2vw;
 	}
 
 	.social-links li {
 		display: inline;
 	}
+
+}
+
+@media only screen 
+and (min-width: 1200px) 
+{
+
 
 }
