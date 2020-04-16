@@ -14,6 +14,9 @@ body, html {
 	background: #d7d7d7;
 	font-size: calc(16px + 0.5vw);
 	line-height: calc(1.1em + 0.5vw);
+
+	display: flex;
+	justify-content: center;
 	/* background: linear-gradient(340deg, #00C9FF 0%, #92FE9D 100%); */
 
 	/* background-image: linear-gradient(-45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
@@ -23,49 +26,41 @@ body, html {
 /*
 	/ / / / / CONTENT 
 */
-.title {
-	margin-top: 1em;
-	flex-direction: column;
-	/* transform: rotate(-10deg); */
-}
-
 #container {
-	max-width: 100vw;
-}
-.content {
-	animation: fadein 5s;
-	margin-top: 1em;
-
-	align-items: flex-start;
-	justify-content: center;
-}
-
-.content p {
-	font-family:'Merriweather', serif;
-	color: #777; 
-	margin: 0;
-	padding: 1em;
-	text-align: justify;
+	/* width: 100vmin;
+  	height: 100vmin; */
 	display: flex;
-
-	
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: row;
+	/* outline: 1px solid green; */
 }
-
-/*
-	/ / / / / SVG 
-*/
 svg {
-	max-width: 100%;
-	margin: auto;
-	padding: 0;
+	width: 100%;
+	height: auto;
+	/* transform-origin: 0 0; */
+	outline: 1px solid red;
 }
-
 .line {
 	stroke-dasharray: 2000;
 	/* stroke-dashoffset: 4000; */
 	animation: dash 2s linear forwards;
 	/* previous line color #777777 */
 }
+.content {
+	animation: fadein 5s;
+	margin-top: 1em;
+
+	outline: 1px solid orange;
+}
+.content p {
+	font-family:'Merriweather', serif;
+	color: #777; 
+	margin: 0;
+	padding: 1em;
+	text-align: justify;
+}
+
 
 /*
 
