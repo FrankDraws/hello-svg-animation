@@ -1,57 +1,58 @@
 /*
 	hello svg animation
 
+	background: linear-gradient(340deg, #00C9FF 0%, #92FE9D 100%);
+
+	background-image: linear-gradient(-45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
+	
+	animation: AnimateBG 20s ease infinite;
 */
 
 html {
 	scroll-behavior: smooth;
 }
 body, html {
-	width: 100%;
-	height: 100%;
+	/* width: 100%;
+	height: 100%; */
 	margin: 0;
 	padding: 0;
 	background: #d7d7d7;
 	font-size: calc(16px + 0.5vw);
-	line-height: calc(1.1em + 0.5vw);
+	/* line-height: calc(1.1em + 0.5vw); */
 
 	display: flex;
 	justify-content: center;
-	/* background: linear-gradient(340deg, #00C9FF 0%, #92FE9D 100%); */
-
-	/* background-image: linear-gradient(-45deg, #3bade3 0%, #576fe6 25%, #9844b7 51%, #ff357f 100%);
-	animation: AnimateBG 20s ease infinite; */
 }
 
 /*
 	/ / / / / CONTENT 
 */
 #container {
-	/* width: 100vmin;
-  	height: 100vmin; */
+	width: 100vw;
+  	height: 100vh;
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	align-items: flex-start;
-	flex-direction: row;
-	/* outline: 1px solid green; */
+	flex-direction: column;
+	outline: 1px solid green;
 }
 svg {
-	width: 100%;
-	height: auto;
-	/* transform-origin: 0 0; */
+	width: 100vw;
+	height: 300px;
+	margin: 10px 0 0;
 	outline: 1px solid red;
 }
 .line {
 	stroke-dasharray: 2000;
-	/* stroke-dashoffset: 4000; */
 	animation: dash 2s linear forwards;
-	/* previous line color #777777 */
 }
 .content {
 	animation: fadein 5s;
 	margin-top: 1em;
+	width: 100%;
+	/* display: none; */
 
-	outline: 1px solid orange;
+	outline: 1px solid #777;
 }
 .content p {
 	font-family:'Merriweather', serif;
@@ -60,7 +61,6 @@ svg {
 	padding: 1em;
 	text-align: justify;
 }
-
 
 /*
 
@@ -78,7 +78,6 @@ svg {
 	  background-position: 0% 50%;
 	}
   }
-  
   @keyframes AnimateBG {
 	0% {
 	  background-position: 0% 50%;
@@ -99,8 +98,6 @@ svg {
         opacity:1;
     }
 }
-
-
 @keyframes dash {
 	from {
 		stroke-dashoffset: 2000;
