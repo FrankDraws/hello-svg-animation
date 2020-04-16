@@ -78,7 +78,6 @@ body {
 	margin-top: 1em;
 	flex-direction: column;
 	/* transform: rotate(-10deg); */
-	outline: 1px solid red;
 }
 
 #container {
@@ -89,7 +88,6 @@ body {
 
 	animation: fadein 5s;
 	margin-top: 1em;
-	outline: 1px solid red;
 
 	/* border-radius: 20px;
 	background: #fff;
