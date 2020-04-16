@@ -34,13 +34,13 @@ body, html {
 	/* justify-content: center; */
 	align-items: flex-start;
 	flex-direction: column;
-	outline: 1px solid green;
+	/* outline: 1px solid green; */
 }
 svg {
 	width: 100vw;
 	height: 300px;
 	margin: 10px 0 0;
-	outline: 1px solid red;
+	/* outline: 1px solid red; */
 }
 .line {
 	stroke-dasharray: 2000;
