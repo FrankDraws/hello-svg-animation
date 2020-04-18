@@ -31,8 +31,8 @@ body, html {
 	width: 100vw;
   	height: 100vh;
 	display: flex;
-	/* justify-content: center; */
-	align-items: flex-start;
+	justify-content: center;
+	/* align-items: flex-start; */
 	flex-direction: column;
 	/* outline: 1px solid green; */
 }
@@ -121,22 +121,20 @@ svg {
 		max-height: 300px;
 	}
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 	#container {
-		width: 100vw;
-		height: 900px;
+		width: 100%;
+		height: 90%;
 	}
 	svg {
-		display: flex;
-		justify-content: center;
+		/* display: flex;
+		justify-content: center; */
+		width: 100%;
 		outline: 1px solid black;
 	}
 	path {
 		/* height: 900px; */
-		width: 100vw;
-		margin: 0 0 0 4em;
-		display: block;
-
+		padding: 0 0 0 1em;
 		
 		outline: 1px solid blue;
 	}
