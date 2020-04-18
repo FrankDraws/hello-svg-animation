@@ -17,8 +17,8 @@ body, html {
 	margin: 0;
 	padding: 0;
 	background: #d7d7d7;
-	font-size: calc(16px + 0.5vw);
-	/* line-height: calc(1.1em + 0.5vw); */
+	font-size: 20px;
+	line-height: calc(1.1em + 0.5vw);
 
 	display: flex;
 	justify-content: center;
@@ -105,5 +105,39 @@ svg {
 
 	to {
 		stroke-dashoffset: 4000;
+	}
+}
+
+/*
+
+	/ / / / / MEDIA QUERIES 
+
+*/
+@media only screen and (min-width: 768px) {
+	#container, svg {
+		max-width: 768px;
+	}
+	svg {
+		max-height: 300px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#container {
+		width: 100vw;
+		height: 900px;
+	}
+	svg {
+		display: flex;
+		justify-content: center;
+		outline: 1px solid black;
+	}
+	path {
+		/* height: 900px; */
+		width: 100vw;
+		margin: 0 0 0 4em;
+		display: block;
+
+		
+		outline: 1px solid blue;
 	}
 }
