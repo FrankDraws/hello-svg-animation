@@ -138,11 +138,9 @@ svg {
 		/* display: flex;
 		justify-content: center; */
 		width: 100%;
-		/* outline: 1px solid black; */
 	}
 	path {
 		/* height: 900px; */
 		padding: 0 0 0 1em;
-		/* outline: 1px solid blue; */
 	}
 }
