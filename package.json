@@ -1,6 +1,6 @@
 {
   "name": "frankjuval.com",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My website",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,8 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-imagemin": "^6.2.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-watch": "^5.0.1"
   },
   "dependencies": {}

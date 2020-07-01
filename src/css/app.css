@@ -11,6 +11,7 @@
 html {
 	scroll-behavior: smooth;
 }
+
 body, html {
 	/* width: 100%;
 	height: 100%; */
@@ -19,7 +20,6 @@ body, html {
 	background: #d7d7d7;
 	font-size: 20px;
 	line-height: calc(1.1em + 0.5vw);
-
 	display: flex;
 	justify-content: center;
 }
@@ -27,36 +27,40 @@ body, html {
 /*
 	/ / / / / CONTENT 
 */
+
 #container {
 	width: 100vw;
-  	height: 100vh;
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	/* align-items: flex-start; */
 	flex-direction: column;
 	/* outline: 1px solid green; */
 }
+
 svg {
 	width: 100vw;
 	height: 300px;
 	margin: 10px 0 0;
 	/* outline: 1px solid red; */
 }
+
 .line {
 	stroke-dasharray: 2000;
 	animation: dash 2s linear forwards;
 }
+
 .content {
 	animation: fadein 5s;
 	margin-top: 1em;
 	width: 100%;
 	/* display: none; */
-
 	/* outline: 1px solid #777; */
 }
+
 .content p {
-	font-family:'Merriweather', serif;
-	color: #777; 
+	font-family: 'Merriweather', serif;
+	color: #777;
 	margin: 0;
 	padding: 1em;
 	text-align: justify;
@@ -67,42 +71,44 @@ svg {
 	/ / / / / KEY FRAMES 
 
 */
+
 @-webkit-keyframes AnimateBG {
 	0% {
-	  background-position: 0% 50%;
+		background-position: 0% 50%;
 	}
 	50% {
-	  background-position: 100% 50%;
+		background-position: 100% 50%;
 	}
 	100% {
-	  background-position: 0% 50%;
+		background-position: 0% 50%;
 	}
-  }
-  @keyframes AnimateBG {
+}
+
+@keyframes AnimateBG {
 	0% {
-	  background-position: 0% 50%;
+		background-position: 0% 50%;
 	}
 	50% {
-	  background-position: 100% 50%;
+		background-position: 100% 50%;
 	}
 	100% {
-	  background-position: 0% 50%;
+		background-position: 0% 50%;
 	}
-  }
+}
 
 @keyframes fadein {
-    from {
-        opacity:0;
-    }
-    to {
-        opacity:1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
+
 @keyframes dash {
 	from {
 		stroke-dashoffset: 2000;
 	}
-
 	to {
 		stroke-dashoffset: 4000;
 	}
@@ -113,6 +119,7 @@ svg {
 	/ / / / / MEDIA QUERIES 
 
 */
+
 @media only screen and (min-width: 768px) {
 	#container, svg {
 		max-width: 768px;
@@ -121,6 +128,7 @@ svg {
 		max-height: 300px;
 	}
 }
+
 @media only screen and (max-width: 767px) {
 	#container {
 		width: 100%;
@@ -130,12 +138,11 @@ svg {
 		/* display: flex;
 		justify-content: center; */
 		width: 100%;
-		outline: 1px solid black;
+		/* outline: 1px solid black; */
 	}
 	path {
 		/* height: 900px; */
 		padding: 0 0 0 1em;
-		
-		outline: 1px solid blue;
+		/* outline: 1px solid blue; */
 	}
 }
