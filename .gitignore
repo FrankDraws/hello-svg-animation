@@ -55,7 +55,7 @@ Thumbs.d
 # /Assets
 # /Work
 
-# !directoryName/
-!.gitignore
+# Miscellanea
 ~/.bash_profile
 resources.txt
+package-lock.json
