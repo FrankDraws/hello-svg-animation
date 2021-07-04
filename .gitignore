@@ -52,13 +52,11 @@ Thumbs.d
 
 # Directories - FJQ #
 ###############
-# /Assets
-# /Work
+/node_modules
 
 # Miscellanea
 ~/.bash_profile
 resources.txt
 package-lock.json
-/node_modules
 _config.yml
 .bash_profile
